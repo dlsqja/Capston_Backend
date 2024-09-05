@@ -1,0 +1,13 @@
+<button type="button" class="btn btn-secondary mt-3" onclick="window.history.back();">뒤로 가기</button>
+<div class="container mt-5">
+    <h2 class="mb-4">헬스장 상세 정보</h2>
+    <div class="card">
+        <div class="card-body">
+            <p class="card-text" th:text="'연락처: ' + ${gymDetails.contactNumber}"></p>
+            <p class="card-text" th:text="'사업자 등록번호: ' + ${gymDetails.businessNumber}"></p>
+            <p class="card-text" th:text="'사업자 구분: ' + ${gymDetails.businessType}"></p>
+            <p class="card-text" th:text="'사업자 이름: ' + ${gymDetails.ownerName}"></p>
+            <a th:href="@{${gymDetails.businessFile}}" class="btn btn-primary" th:text="'사업자 등록증'">사업자 등록증</a>
+        </div>
+    </div>
+</div>

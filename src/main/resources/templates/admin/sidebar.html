@@ -1,0 +1,14 @@
+<div th:fragment="sidebar">
+    <nav id="sidebar">
+        <th:block th:insert="~{admin/sidebar-js}"></th:block>
+        <div class="sidebar-header">
+            <h3><a th:href="@{/admin}">ADMIN</a></h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li><a th:href="@{/admin/gyms/pending}">헬스장 요청 목록</a></li>
+            <li><a th:href="@{/admin/gyms}">등록된 헬스장 목록</a></li>
+            <li><a th:href="@{/admin/equipments}">AI 코칭 기구 목록</a></li>
+        </ul>
+    </nav>
+</div>

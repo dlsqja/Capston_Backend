@@ -1,0 +1,26 @@
+<div th:fragment="gymsList">
+    <h2>헬스장 요청 목록</h2>
+    <table class="styled-table">
+        <thead>
+        <tr>
+            <th>헬스장 이름</th>
+            <th>주소</th>
+            <th>상세 주소</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="gym : ${pendingGyms}">
+            <td th:text="${gym.gymName}">헬스장 이름</td>
+            <td th:text="${gym.address.fullAddress}">주소</td>
+            <td th:text="${gym.address.detailAddress}">상세 주소</td>
+            <td>
+                <form th:action="@{/admin/gyms/gymregistrations}" method="get" style="display: inline;">
+                    <input type="hidden" name="gymId" th:value="${gym.id}" />
+                    <button type="submit" class="gyms-details">상세 보기</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

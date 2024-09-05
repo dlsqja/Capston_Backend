@@ -1,0 +1,16 @@
+<button type="button" class="btn btn-secondary mt-3" onclick="window.history.back();">뒤로 가기</button>
+<div class="container mt-5">
+    <h2 class="mb-4">기구 상세 정보</h2>
+    <div class="card">
+        <div class="card-body">
+            <p class="card-text" th:text="'기구 이름: ' + ${equipment.equipmentName}"></p>
+            <p class="card-text" th:text="'기본 횟수: ' + ${equipment.defaultCount}"></p>
+            <p class="card-text" th:text="'기본 세트: ' + ${equipment.defaultSet}"></p>
+            <p class="card-text" th:text="'기본 무게: ' + ${equipment.defaultWeight}"></p>
+            <p class="card-text" th:text="'운동 설명: ' + ${exercise.exerciseDescription}"></p>
+            <p class="card-text">운동 방법<p>
+            <p class="card-text" th:each="step : ${exercise.exerciseMethod}" th:text="${step}"></p>
+            <img th:src="@{${exercise.topImage}}" alt="운동 사진" class="img-fluid">
+        </div>
+    </div>
+</div>

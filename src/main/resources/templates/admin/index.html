@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="context-path" th:content="@{/}"/>
+    <title>HELPT - Admin</title>
+<!--     Common header-->
+<!--    <th:block th:insert="common/include-link"></th:block>-->
+<!--     Custom styles for sidebar-->
+    <link th:href="@{/css/index.css}" rel="stylesheet">
+    <link th:href="@{/css/pending.css}" rel="stylesheet">
+    <link th:href="@{/css/detail.css}" rel="stylesheet">
+    <link th:href="@{/css/equipment.css}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<!-- Common script-->
+<!--<th:block th:insert="common/include-script"></th:block>-->
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav th:replace="~{admin/sidebar :: sidebar}"></nav>
+
+        <div id="content" class="content">
+            <button type="button" id="sidebarCollapse" class="navbar-btn"><i class="fas fa-bars"></i></button>
+            <hr>
+            <!-- Page Content Holder -->
+            <div th:replace="~{${template}}"></div>
+<!--            <div th:replace="~{${gymDetailPage}}"></div>-->
+        </div>
+    </div>
+</body>
+</html>

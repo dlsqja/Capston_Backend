@@ -1,0 +1,31 @@
+<div th:fragment="equipmentsList">
+    <h2>기구 목록</h2>
+    <table class="styled-table">
+        <thead>
+        <tr>
+            <th>기구 이름</th>
+            <th>기본 횟수</th>
+            <th>기본 세트</th>
+            <th>기본 무게</th>
+            <th>작업</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="equipment : ${equipments}">
+            <td th:text="${equipment.equipmentName}">기구 이름</td>
+            <td th:text="${equipment.defaultCount}">기본 횟수</td>
+            <td th:text="${equipment.defaultSet}">기본 세트</td>
+            <td th:text="${equipment.defaultWeight}">기본 무게</td>
+            <td class="action-cell">
+                <a th:href="@{/admin/equipments/{id}(id=${equipment.equipmentId})}" class="show-button">상세보기</a>
+                <a th:href="@{/admin/equipments/edit/{id}(id=${equipment.equipmentId})}" class="edit-button">수정</a>
+                <form th:action="@{/admin/equipments/delete/{id}(id=${equipment.equipmentId})}" method="post">
+                    <input type="hidden" name="_method" value="delete" />
+                    <button type="submit" class="delete-button">삭제</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <a th:href="@{/admin/equipments/add}" class="add-button">기구 추가</a>
+</div>

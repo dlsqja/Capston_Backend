@@ -1,0 +1,89 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border: 2px solid #5a5a5a;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    background: #7386D5;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-text {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+a.btn {
+    font-weight: 500;
+    margin-top: 40px !important; /* 우선순위를 높임 */
+    /* 나머지 스타일 속성은 그대로 유지 */
+    background-image: linear-gradient(45deg, #6a11cb, #2575fc);
+    border: none;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.btn-secondary {
+    background-color: #BDBDBD;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #6c757d;
+}
+
+.btn-primary {
+    background-image: linear-gradient(45deg, #6a11cb, #2575fc); /* 그라데이션 배경 */
+    border: none; /* 테두리 제거 */
+    color: #fff; /* 텍스트 색상 */
+    padding: 12px 24px; /* 패딩 조정 */
+    font-size: 16px; /* 글씨 크기 */
+    font-weight: bold; /* 글씨 두께 */
+    border-radius: 30px; /* 버튼 모서리 둥글게 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    transition: all 0.3s; /* 부드러운 전환 효과 */
+}
+
+.btn-primary:hover {
+    background-image: linear-gradient(45deg, #2575fc, #6a11cb); /* 호버 시 그라데이션 변경 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* 호버 시 그림자 효과 강조 */
+}
+
+h2.mb-4 {
+    color: #4a4e69;
+    margin-bottom: 20px;
+}
+
+/* 뒤로 가기 버튼 추가 스타일 */
+.btn-secondary.mt-3 {
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 사이드바 스타일 */
+#sidebar ul li a {
+    color: #ffffff; /* 사이드바의 링크 텍스트 색상을 하얀색으로 설정 */
+}
